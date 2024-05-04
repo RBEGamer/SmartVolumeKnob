@@ -39,7 +39,7 @@ For additional haptic and quality improvement, you can print the outher shell le
 
 * 2x `KY-010`  - Light Barrier Module or 1x `AEDR-8300` optischer optical encoder
 * 1x `Raspberry Pi Pico`
-* 1x `WS2812 RGB LED Ring 8 LEDs`
+* 1x `WS2812 RGB LED Ring 8 LEDs` or `CJMCU-2812-7`
 * some wires to connect the individual modules
 
 ### MISC
