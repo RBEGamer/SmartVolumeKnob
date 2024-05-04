@@ -26,6 +26,7 @@ High quality material: Made from durable and lightweight 3D printed material tha
 * Inflill: 10% - 20%
 * The screw holes are designed without any large tolerances. So may run a X-Y compensation on your printer first.
 
+For additional haptic and quality improvement, you can print the outher shell led led diffusor using a SLA / SLS printer!
   
 ### MECHANICAL
 
