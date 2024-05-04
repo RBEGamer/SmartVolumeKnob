@@ -132,6 +132,16 @@ class ledring:
     def set_neopixel_full_hsv(self, _hsv_color: float = 0.0):
         self.set_neopixel_percentage(1.0, _hsv_color, _hsv_color, _hsv_color)
 
+    def set_neopixel_full_hue_value(self, _hue: float = 0.0, _value: float = 1.0, _saturation: float = 1.0):
+        hsv_color = [_hue, _saturation, min(_value, config.CFG_NEOPIXEL_MAX_BRIGHTNESS)]
+
+        rgb_color = self.hsv_to_rgb(hsv_color)
+
+        for i in range(config.CFG_NEOPIXEL_LED_COUNT):
+            self.neopixelring[i] = (rgb_color[0], rgb_color[1], rgb_color[2])
+        
+        self.neopixelring.write()
+
     def set_neopixel_random(self, _er: bool = False, _eg: bool = False, _eb: bool = True):
         r: int = int(128* random.random()) * _er
         g: int = int(128* random.random()) * _eg
