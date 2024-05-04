@@ -1,13 +1,16 @@
+import time
+import board
+from rainbowio import colorwheel
 import neopixel
-import machine
-import config
-import neopixel
+
 import random
-import helper
+
 import math
 import time
-from singleton import singleton
 
+from static_modules.singleton import singleton
+from static_modules import config
+from static_modules import helper
 @singleton
 class ledring:
 
@@ -68,96 +71,19 @@ class ledring:
     neopixelring: neopixel.NeoPixel = None
    
     def __init__(self):
-        self.neopixelring = neopixel.NeoPixel(machine.Pin(config.CFG_NEOPIXEL_PIN), config.CFG_NEOPIXEL_LED_COUNT)
-   
+        self.neopixelring = neopixel.NeoPixel(config.CFG_NEOPIXEL_PIN, config.CFG_NEOPIXEL_LED_COUNT, brightness=config.CFG_NEOPIXEL_MAX_BRIGHTNESS, auto_write=False)
+
     def clear(self):
-        self.set_neopixel_full(
-            0, 0, 0)
+        self.neopixelring.fill((0, 0, 0))
 
-
-    def set_neopixel_spinner(self, _current_segment: int, _no_segment: int, _on_color: float = 0.0, _off_color: float = 0.6):
-        if _current_segment < 0:
-            _current_segment = 0
-        
-        if _no_segment <= 0:
-            _no_segment = config.CFG_NEOPIXEL_LED_COUNT / 6
-            
-        
-        leds_per_segment: int = config.CFG_NEOPIXEL_LED_COUNT / _no_segment
-        
-        on_color = self.hsv_to_rgb([_on_color, config.CFG_NEOPIXEL_MAX_BRIGHTNESS, config.CFG_NEOPIXEL_MAX_BRIGHTNESS])
-        off_color = self.hsv_to_rgb([_off_color, config.CFG_NEOPIXEL_MAX_BRIGHTNESS, config.CFG_NEOPIXEL_MAX_BRIGHTNESS])
-
-        for i in range(config.CFG_NEOPIXEL_LED_COUNT):
-            
-            if i > _current_segment*leds_per_segment and i < (_current_segment+1)*leds_per_segment:
-                self.neopixelring[i] = (on_color[0], on_color[1], on_color[2])
-            else:
-                self.neopixelring[i] = (off_color[0], off_color[1], off_color[2])
-            
-        self.neopixelring.write()
-
-
-
-    def set_neopixel_percentage(self, _percentage: float, _start_color: float = 0.0, _target_color: float = 0.4, _off_color: float = 0.6, _independent_coloring: bool = False):
-        _percentage = min(_percentage, 1.0)
-        
-        disp_value: int = int(min([helper.imap(_percentage * 100, 0, 100, 0 , config.CFG_NEOPIXEL_LED_COUNT), config.CFG_NEOPIXEL_LED_COUNT]))
-        #print(disp_value)
-        
-
-        color_value: float = helper.fmap(disp_value, 0, config.CFG_NEOPIXEL_LED_COUNT, _start_color , _target_color)
-        
-        off_color = self.hsv_to_rgb([_off_color, config.CFG_NEOPIXEL_MAX_BRIGHTNESS, config.CFG_NEOPIXEL_MAX_BRIGHTNESS])
-            
-        
-        for i in range(config.CFG_NEOPIXEL_LED_COUNT):
-            
-            if _independent_coloring:
-                color_value = helper.fmap(i, 0, config.CFG_NEOPIXEL_LED_COUNT, _start_color , _target_color)
-        #    # APPLY START INDEX OFFSET
-            led_index = int((i+config.CFG_NEOPIXEL_LED_START_OFFSET) % config.CFG_NEOPIXEL_LED_COUNT)
-        #    # ABOVE TARGET PERCENTAGE SET OFF OR ON LOW COLOR
-            if i > disp_value:
-                self.neopixelring[led_index] = (off_color[0], off_color[1], off_color[2])
-                continue
-            
-            rgb = self.hsv_to_rgb([color_value, 1.0, config.CFG_NEOPIXEL_MAX_BRIGHTNESS])
-            self.neopixelring[led_index] = (rgb[0], rgb[1], rgb[2])
-        
-        
-        self.neopixelring.write()
-
-
-    def set_neopixel_full_hsv(self, _hsv_color: float = 0.0):
-        self.set_neopixel_percentage(1.0, _hsv_color, _hsv_color, _hsv_color)
 
     def set_neopixel_full_hue_value(self, _hue: float = 0.0, _value: float = 1.0, _saturation: float = 1.0):
         hsv_color = [_hue, _saturation, min(_value, config.CFG_NEOPIXEL_MAX_BRIGHTNESS)]
 
         rgb_color = self.hsv_to_rgb(hsv_color)
 
-        for i in range(config.CFG_NEOPIXEL_LED_COUNT):
-            self.neopixelring[i] = (rgb_color[0], rgb_color[1], rgb_color[2])
+        self.neopixelring.fill((rgb_color[0], rgb_color[1], rgb_color[2]))
         
-        self.neopixelring.write()
-
-    def set_neopixel_random(self, _er: bool = False, _eg: bool = False, _eb: bool = True):
-        r: int = int(128* random.random()) * _er
-        g: int = int(128* random.random()) * _eg
-        b: int = int(128* random.random()) * _eb
-        self.set_neopixel_full(r, g, b)
-
-
-    def set_neopixel_full(self, _r: int, _g: int, _b: int):
-        h, _, _ = self.rgb_to_hsv([_r, _g, _b])
-        self.set_neopixel_full_hsv(h)
-
-if __name__ == "__main__":
-    while True:
-        segments: int = config.CFG_NEOPIXEL_LED_COUNT / 5
-        for i in range(segments):
-            ledring().set_neopixel_spinner(i, segments, ledring().COLOR_PRESET_HSV_H__BLUE, ledring().COLOR_PRESET_HSV_H__PINK)
-            time.sleep(0.1)
+        self.neopixelring.show()
 
 
