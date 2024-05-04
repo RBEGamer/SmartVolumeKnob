@@ -36,10 +36,9 @@ For additional haptic and quality improvement, you can print the outher shell le
 
 ### ELECTRICAL
 
-* `KY-010`  - Light Barrier Module
-* `Raspberry Pi Pico`
-* `WS2812 RGB LED Ring 8 LEDs`
-*
+* 2x `KY-010`  - Light Barrier Module
+* 1x `Raspberry Pi Pico`
+* 1x `WS2812 RGB LED Ring 8 LEDs`
 
 ### MISC
 
