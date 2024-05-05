@@ -32,7 +32,7 @@ For additional haptic and quality improvement, you can print the outher shell le
 
 * 7x Heat inserts` M3 Short`
 * 5x `M3x10 FHCS`
-* 2x `M3x30 SHCS`
+* 2x `M3x25 SHCS`
 * 2x - 4x `M2x8` to secure the `Raspberry Pi Pico`, or just use a bit of hotglue or superglue
 
 ### ELECTRICAL
