@@ -8,6 +8,7 @@ import rotaryio
 import board
 import random
 import time
+import digitalio
 from static_modules import ledring
 from static_modules import config
 from static_modules import helper
@@ -15,8 +16,8 @@ from static_modules import helper
 
 
 # CONSTANTS
-LED_FADE_TIMEOUT_TIME: int = 10
-USER_INTERACTION_TIMEOUT_TIME: int = 1000 #FADE LEDS DOWN AFTER x SECONDS OF INATIVITY
+LED_FADE_TIMEOUT_TIME: int = 1
+USER_INTERACTION_TIMEOUT_TIME: int = 2000 #FADE LEDS DOWN AFTER x SECONDS OF INATIVITY
 MAX_LED_HSV_VALUE: int = 100 # FOR SCALING BACK FROM 0-X => 0-1.0
 
 # VARIABLES
@@ -29,6 +30,8 @@ target_led_v: int = 100
 def handle_encoder_change(_direction: int = 0, _amount: int = 1):
     global target_led_h
     global target_led_v
+    global current_led_h
+    global current_led_v
     
     for i in range(_amount):
         if _direction > 0:
@@ -39,6 +42,8 @@ def handle_encoder_change(_direction: int = 0, _amount: int = 1):
     target_led_h = (target_led_h +(_direction*_amount)) % MAX_LED_HSV_VALUE
     target_led_v = MAX_LED_HSV_VALUE
     
+    
+    #current_led_h = target_led_h
     print("hec", _direction, _amount, target_led_h)
 
 
@@ -53,10 +58,11 @@ consumer.send(ConsumerControlCode.VOLUME_DECREMENT)
 
 # INIT LED RING
 ledring.ledring().clear()
-ledring.ledring().set_neopixel_full_hue_value(ledring.ledring().COLOR_PRESET_HSV_H__BLUE)
+
 
 ## REGISTER ENCODER BUTTON EVENTS BY REMAPPING THE ENCODER SWITCH 
-
+#pina = digitalio.DigitalInOut(config.CFG_ENCODER_CLK_PIN)
+#pinb = digitalio.DigitalInOut(config.CFG_ENCODER_DT_PIN)
 encoder = rotaryio.IncrementalEncoder(config.CFG_ENCODER_CLK_PIN, config.CFG_ENCODER_DT_PIN)
 # CONFIGURE ENCODER
 
@@ -79,16 +85,19 @@ def exec():
 
         # HANDLE ENCODER
         current_encoder_value = encoder.position
+        #print(pina.value, pinb.value)
+        #print(current_encoder_value)
         if current_encoder_value != encoder_middle_point:
+            print(current_encoder_value)
             
-            encoder_middle_point = current_encoder_value
             last_userinteraction_update = helper.millis()
                 
             if current_encoder_value > encoder_middle_point:
                 handle_encoder_change(-1, current_encoder_value)
             elif current_encoder_value < encoder_middle_point:
                 handle_encoder_change(1, current_encoder_value)
-                
+            
+            encoder_middle_point = current_encoder_value
                 
          # HANDLE LED INACTIVITY FADEt
         if abs(helper.millis() - last_userinteraction_update) > USER_INTERACTION_TIMEOUT_TIME:
@@ -96,10 +105,13 @@ def exec():
             
             if target_led_v > 0:
                 target_led_v = target_led_v - 1
-                print(target_led_v)
+                #print(target_led_v)
                 force_fade = True
         else:
-            force_fade = False
+            if force_fade:
+                # START WITH A NEW RANDOM COLOR NEXT TIME THE USER INTERACTS WITH THE SYSTEM
+                target_led_h = random.randrange(0, MAX_LED_HSV_VALUE+1)
+                force_fade = False
                 
         # HANDLE LED FADING
         if  abs(last_update - helper.millis()) > LED_FADE_TIMEOUT_TIME or force_fade:
