@@ -39,7 +39,7 @@ To further simplify the design a magnetic absolute encoder is used here instead 
 * Layer height: 0.2mm or 0.1mm for better shell quality
 * Support: Support on buildplate only
 * Inflill: 10% - 20%
-* The screw holes are designed without any large tolerances. So may run a X-Y compensation on your printer first.
+* The screw holes are designed without any large tolerances. So may run a X-Y compensation on your printer first or drill them to size after printing.
 
 For additional haptic and quality improvement, you can print the outher shell led led diffusor using a SLA / SLS printer!
 
