@@ -27,6 +27,11 @@ The key difference is the size and complexity of the mechanical strucutre.
 
 `V1` is the small variant of the `SmartVolumeKnob` with a footprint of arounf `60mm` in diameter, but the mechanical parts are designed with limited tolerances.
 It uses a 3d printed optical encoder
+
+![V1_OPTICAL_ENCODER](documentation/images/v1/render_6.PNG)
+
+
+
 The `V2` is a bigger and more simplified design with a footprint of arounf `110mm`
 To further simplification of the design a magnetic absolute encoder is used here.
 
