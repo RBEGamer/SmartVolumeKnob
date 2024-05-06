@@ -50,7 +50,8 @@ After printing all parts use an `debringing tool` on all parts with inner holes 
 * Superglue
 * Debringing tool
 * Small zip ties
-
+* Some wires to connect the individual modules
+* Micro USB cable
   
 ### V2
 
@@ -58,10 +59,17 @@ After printing all parts use an `debringing tool` on all parts with inner holes 
 
 #### MECHANICAL
 
+* 13x Heat inserts` M3 Short`
+* 1x Bearing `6001RS 12mm x 28mm x 8mm`
+* 9x `M3x10 FHCS`
+* 4x `M3x40 SHCS`
+* 2x - 4x `M2x8` to secure the `Raspberry Pi Pico`, or just use a bit of hotglue or superglue
+  
 #### ELECTRICAL
 
-
-
+* 1x `Raspberry Pi Pico`
+* 21cm of `WS2812 RGB strip` (more LEDs/m equals to  more brightness :)
+* 1x `AS5600 Magnetic Angle Encoder`
   
 ### V1
 
@@ -72,7 +80,7 @@ After printing all parts use an `debringing tool` on all parts with inner holes 
 * `bearing_clamp_bottom.stl`
 * `bearing_clamp_top.stl`
 * `bottom_plate.stl`
-* `encder_disc.stl` - print with 0.1mm!
+* `encder_disc.stl` - print with 0.1mm and remove any stringing!
 * `illuminator.stl`
 * `illuminator_spacer.stl`
 * `led_holder.stl`
@@ -84,12 +92,13 @@ After printing all parts use an `debringing tool` on all parts with inner holes 
 * 5x `M3x10 FHCS`
 * 2x `M3x25 SHCS`
 * 2x - 4x `M2x8` to secure the `Raspberry Pi Pico`, or just use a bit of hotglue or superglue
+* 1x Bearing `6001RS 12mm x 28mm x 8mm`
 
 #### ELECTRICAL
 
 * 2x `KY-010`  - Light Barrier Module or 1x `AEDR-8300` optischer optical encoder
 * 1x `Raspberry Pi Pico`
 * 1x `WS2812 RGB LED Ring 8 LEDs` or `CJMCU-2812-7`
-* some wires to connect the individual modules
+
 
 
