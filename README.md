@@ -39,12 +39,24 @@ To further simplification of the design a magnetic absolute encoder is used here
 
 For additional haptic and quality improvement, you can print the outher shell led led diffusor using a SLA / SLS printer!
 
+All exported `.stl` files can be found in the `src/cad/<VARIANT>/stl`. All parts as `.step` and the `Fusion360` project files can be found in the parent folder.
 
 ### V2
 
 #### 3D PRINTED PARTS
 
+#### MECHANICAL
 
+#### ELECTRICAL
+
+#### MISC
+
+* Soldering Iron
+* Cables
+* Superglue
+
+
+  
 ### V1
 
 
