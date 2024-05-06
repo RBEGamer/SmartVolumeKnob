@@ -90,7 +90,7 @@ After printing all parts use an `debringing tool` on all parts with inner holes 
 * `bearing_clamp_top.stl`
 * `bottom_plate.stl`
 * `encder_disc.stl` - print with 0.1mm and remove any stringing!
-* `illuminator.stl`
+* Lightguide - `illuminator.stl` - use white or transparent filament!
 * `illuminator_spacer.stl`
 * `led_holder.stl`
 * `outher_shell`
