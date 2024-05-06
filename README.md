@@ -13,7 +13,7 @@ Get the ultimate companion for your music and gaming session today!
 * Interactive design: Twist, feel and enjoy - The Fidget Volume Knob offers a tactile experience that engages your fingers and stimulates your senses.
 High quality material: Made from durable and lightweight 3D printed material that is both sturdy and aesthetically pleasing.
 * Compatibility: The Volume Knob is compatible with a wide range of devices, including speaker systems, amplifiers, computers and more. Advanced compatibility allows you to utilize the full potential of your audio equipment.
-* Simple setup: Setup is a breeze and requires no special tools.
+* Simple setup: Setup is a breeze and requires no special tools. Only a 3D printer some screws and wires are needed for construction. Software is plug&play.
 * Ergonomic design: The ergonomic design of the volume knob ensures comfortable handling and a comfortable gaming experience, whether you're listening to music for hours or enjoying intense gaming sessions.
 * Stylish design: With its modern and futuristic design, the Fidget Volume Knob is not only a functional accessory, but also an eye-catcher in any room.
 * Versatile use: Whether for listening to music, gaming or simply to relieve stress - the Fidget Volume Knob with LED effects is a versatile accessory that is suitable for any occasion. Thanks to the microcontroller used, all kinds of functions can be realized.
