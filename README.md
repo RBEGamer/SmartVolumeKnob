@@ -69,12 +69,14 @@ After printing all parts use an `debringing tool` on all parts with inner holes 
 * 9x `M3x10 FHCS`
 * 4x `M3x40 SHCS`
 * 2x - 4x `M2x8` to secure the `Raspberry Pi Pico`, or just use a bit of hotglue or superglue
+* `aluminium foil` for the light reflector
+
   
 #### ELECTRICAL
 
 * 1x `Raspberry Pi Pico`
 * 21cm of `WS2812 RGB strip` (more LEDs/m equals to  more brightness :)
-* 1x `AS5600 Magnetic Angle Encoder`
+* 1x `AS5600 Magnetic Angle Encoder` with `diamagnetic magnet`
   
 ### V1
 
