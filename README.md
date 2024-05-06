@@ -18,11 +18,19 @@ High quality material: Made from durable and lightweight 3D printed material tha
 * Stylish design: With its modern and futuristic design, the Fidget Volume Knob is not only a functional accessory, but also an eye-catcher in any room.
 * Versatile use: Whether for listening to music, gaming or simply to relieve stress - the Fidget Volume Knob with LED effects is a versatile accessory that is suitable for any occasion. Thanks to the microcontroller used, all kinds of functions can be realized.
 
-## BOM
+## BOM 
 
-### 3D PRINTED PARTS
+![SmartVolumeKnob](documentation/images/v1_v2_comarison.png)
 
-#### 3D PRINT SETTINGS
+Currently there are two different versions of the `SmartVolumeKnob` labeled  `v1` and `v2`.
+The key difference is the size and complexity of the mechanical strucutre.
+
+`V1` is the small variant of the `SmartVolumeKnob` with a footprint of arounf `60mm` in diameter, but the mechanical parts are designed with limited tolerances.
+It uses a 3d printed optical encoder
+The `V2` is a bigger and more simplified design with a footprint of arounf `110mm`
+To further simplification of the design a magnetic absolute encoder is used here.
+
+### GENERAL 3D PRINT SETTINGS
 
 * Layer height: 0.2mm or 0.1mm for better shell quality
 * Support: Support on buildplate only
@@ -30,22 +38,43 @@ High quality material: Made from durable and lightweight 3D printed material tha
 * The screw holes are designed without any large tolerances. So may run a X-Y compensation on your printer first.
 
 For additional haptic and quality improvement, you can print the outher shell led led diffusor using a SLA / SLS printer!
-  
-### MECHANICAL
+
+
+### V2
+
+#### 3D PRINTED PARTS
+
+
+### V1
+
+
+#### 3D PRINTED PARTS
+
+* `baseplate.stl`
+* `bearing_clamp_bottom.stl`
+* `bearing_clamp_top.stl`
+* `bottom_plate.stl`
+* `encder_disc.stl` - print with 0.1mm!
+* `illuminator.stl`
+* `illuminator_spacer.stl`
+* `led_holder.stl`
+* `outher_shell`
+    
+#### MECHANICAL
 
 * 7x Heat inserts` M3 Short`
 * 5x `M3x10 FHCS`
 * 2x `M3x25 SHCS`
 * 2x - 4x `M2x8` to secure the `Raspberry Pi Pico`, or just use a bit of hotglue or superglue
 
-### ELECTRICAL
+#### ELECTRICAL
 
 * 2x `KY-010`  - Light Barrier Module or 1x `AEDR-8300` optischer optical encoder
 * 1x `Raspberry Pi Pico`
 * 1x `WS2812 RGB LED Ring 8 LEDs` or `CJMCU-2812-7`
 * some wires to connect the individual modules
 
-### MISC
+#### MISC
 
 * Soldering Iron
 * Cables
