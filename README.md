@@ -30,7 +30,7 @@ It uses a 3d printed optical encoder
 The `V2` is a bigger and more simplified design with a footprint of arounf `110mm`
 To further simplification of the design a magnetic absolute encoder is used here.
 
-### GENERAL 3D PRINT SETTINGS
+### GENERAL 3D PRINT SETTINGS AND POST PROCESSING STEPS
 
 * Layer height: 0.2mm or 0.1mm for better shell quality
 * Support: Support on buildplate only
@@ -41,6 +41,17 @@ For additional haptic and quality improvement, you can print the outher shell le
 
 All exported `.stl` files can be found in the `src/cad/<VARIANT>/stl`. All parts as `.step` and the `Fusion360` project files can be found in the parent folder.
 
+After printing all parts use an `debringing tool` on all parts with inner holes ( especially on `bearing_*.stl` parts).
+
+#### MISC
+
+* Soldering Iron
+* Cables
+* Superglue
+* Debringing tool
+* Small zip ties
+
+  
 ### V2
 
 #### 3D PRINTED PARTS
@@ -49,11 +60,6 @@ All exported `.stl` files can be found in the `src/cad/<VARIANT>/stl`. All parts
 
 #### ELECTRICAL
 
-#### MISC
-
-* Soldering Iron
-* Cables
-* Superglue
 
 
   
@@ -86,8 +92,4 @@ All exported `.stl` files can be found in the `src/cad/<VARIANT>/stl`. All parts
 * 1x `WS2812 RGB LED Ring 8 LEDs` or `CJMCU-2812-7`
 * some wires to connect the individual modules
 
-#### MISC
 
-* Soldering Iron
-* Cables
-* Superglue
