@@ -1,7 +1,7 @@
 # SmartVolumeKnob
 
 
-![alt text](documenation/imaes/v1/IMG_0534 2.JPG)
+![SmartVolumeKnob](/documenation/imaes/v1/IMG_0534 2.JPG)
 
 Experience a revolutionary gaming experience with our 3D-printed Fidget Volume Knob!
 Bring your music to life and heighten your sensory perception with every twist.
