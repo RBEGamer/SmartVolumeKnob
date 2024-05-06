@@ -78,6 +78,7 @@ After printing all parts use an `debringing tool` on all parts with inner holes 
   
 ### V1
 
+![V1_OPTICAL_ENCODER](documentation/images/v1/render_1.PNG)
 
 #### 3D PRINTED PARTS
 
