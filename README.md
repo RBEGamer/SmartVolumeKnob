@@ -41,7 +41,7 @@ To further simplify the design a magnetic absolute encoder is used here instead 
 * Inflill: 10% - 20%
 * The screw holes are designed without any large tolerances. So may run a X-Y compensation on your printer first or drill them to size after printing.
 
-For additional haptic and quality improvement, you can print the outher shell led led diffusor using a SLA / SLS printer!
+For additional haptic and quality improvement, you can print the * `*_shell.stl` parts using a SLA / SLS printer!
 
 All exported `.stl` files can be found in the `src/cad/<VARIANT>/stl`. All parts as `.step` and the `Fusion360` project files can be found in the parent folder.
 
@@ -62,6 +62,18 @@ After printing all parts use an `debringing tool` on all parts with inner holes 
 ![V1_OPTICAL_ENCODER](documentation/images/v2/render_1.PNG)
 
 #### 3D PRINTED PARTS
+
+* 1x `electronic_bay.stl`
+* 1x `electronic_clamp.stl`
+* 1x `bottom.stl`
+* 1x `bearing_mount_bottom.stl`
+* 1x `bearing_mount_top.stl`
+* 1x `illuminator_bearing_connector.stl`  - use white or transparent filament!
+* 1x Lightguide - `illuminator_bottom.stl`  - use white or transparent filament!
+* 1x Lightguide - `illumniator_top.stl`
+* 1x `outher_shell.stl`
+
+
 
 #### MECHANICAL
 
