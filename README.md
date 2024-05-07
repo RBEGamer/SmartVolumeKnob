@@ -31,7 +31,7 @@ It uses a 3d printed optical encoder consists of one encoder disc and two light 
 ![V1_OPTICAL_ENCODER](documentation/images/v1/render_6.PNG)
 
 
-The `V2` is a bigger and more simplified design with a footprint of arounf `110mm`.
+The `V2` is a huge and more simplified design with a footprint of around `110mm` in diameter.
 To further simplify the design a magnetic absolute encoder is used here instead of the more complicated diy encoder design.
 
 ### GENERAL 3D PRINT SETTINGS AND POST PROCESSING STEPS
