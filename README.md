@@ -72,6 +72,7 @@ After printing all parts use an `debringing tool` on all parts with inner holes 
 * 1x Lightguide - `illuminator_bottom.stl`  - use white or transparent filament!
 * 1x Lightguide - `illumniator_top.stl`
 * 1x `outher_shell.stl`
+* 1x `illuminator_spacer.stl` - optional but helps a lot with assembly
 
 
 
