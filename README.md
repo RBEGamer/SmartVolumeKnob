@@ -133,4 +133,13 @@ For all inner parts the color can be anything, due these are not visible from th
 * 1x `WS2812 RGB LED Ring 8 LEDs` or `CJMCU-2812-7`
 
 
+## BUILD INSTRUCTIONS
+
+Please see additional images of the build process located in `documenation/images/<VARIANT>/`.
+For further help it is possbile to open the complete assembled cad model `src/cad/<VARIANT>/SmartVolumeKnob.*`.
+
+
+### V2
+
+
 
