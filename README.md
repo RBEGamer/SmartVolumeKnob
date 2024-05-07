@@ -49,11 +49,11 @@ After printing all parts use an `debringing tool` on all parts with inner holes 
 
 ### REQUIRED FILAMENT
 
-For both versions there a at least two different filament colors required. One for the base color of the shell and one for the lightpath (white/transparent)
+For both versions there are at least two different filament colors required. One for the base color of the shell and one for the lightpath (`white`/`transparent`)
 For all inner parts the color can be anything, due these are not visible from the outside.
 `PLA` is used on all 3D printed parts here. All files are designed for a  `120x120x190mm` buildplate, such as the `Voron V0`.
 
-*  accent color for outher shell - `shell_*.stl` and `bottom*.stl`, `baseplate*.stl`
+* accent color for outher shell - `shell_*.stl` and `bottom*.stl`, `baseplate*.stl`
 * transparent or white for the lightguide parts - `illuminator_*.stl`
 * unspecified color - all other `*.stl` files
 
