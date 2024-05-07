@@ -78,9 +78,9 @@ For all inner parts the color can be anything, due these are not visible from th
 * 1x `bottom.stl`
 * 1x `bearing_mount_bottom.stl`
 * 1x `bearing_mount_top.stl`
-* 1x `illuminator_bearing_connector.stl`  - use white or transparent filament!
-* 1x Lightguide - `illuminator_bottom.stl`  - use white or transparent filament!
-* 1x Lightguide - `illumniator_top.stl`
+* 1x `illuminator_bearing_connector.stl`
+* 1x `illuminator_bottom.stl` - Lightguide - use white or transparent filament!
+* 1x `illumniator_top.stl` - Lightguide - use white or transparent filament!
 * 1x `outher_shell.stl`
 * 1x `illuminator_spacer.stl` - optional but helps a lot with assembly
 
@@ -113,7 +113,7 @@ For all inner parts the color can be anything, due these are not visible from th
 * `bearing_clamp_top.stl`
 * `bottom_plate.stl`
 * `encder_disc.stl` - print with 0.1mm and remove any stringing!
-* Lightguide - `illuminator.stl` - use white or transparent filament!
+* `illuminator.stl` - Lightguide - use white or transparent filament!
 * `illuminator_spacer.stl`
 * `led_holder.stl`
 * `outher_shell`
